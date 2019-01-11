@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Users/Adim/Documents/AssistanceMessagerie/AssistanceMessagerie/src/assistant/interfaceGraphique.java</file>
-            <file>file:/D:/Users/Adim/Documents/AssistanceMessagerie/AssistanceMessagerie/src/assistant/assistant.java</file>
-            <file>file:/D:/Users/Adim/Documents/AssistanceMessagerie/AssistanceMessagerie/src/assistant/connexionInterface.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistant/fenetreLogin.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistant/interfaceAssistant.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/AssistanceMessagerie.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/Message.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,10 +5,18 @@
  */
 package assistant;
 
+
 /**
  *
  * @author Adim
  */
-public class assistant {
+public class interfaceAssistant  {
     
+       public static void main(String[] args)
+       {
+           fenetreLogin fenetreLogin = new fenetreLogin();
+           fenetreLogin.setVisible(true);
+           
+       }
+   
 }
