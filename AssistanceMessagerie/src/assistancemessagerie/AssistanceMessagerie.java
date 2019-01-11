@@ -5,17 +5,22 @@
  */
 package assistancemessagerie;
 
+import assistant.testroom;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author p1819346
  */
 public class AssistanceMessagerie {
-
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public user monUtilisateur;
+    public List<room> listeSalle = new ArrayList<room>();
+    public static void main(String[] args) throws IOException {
+        testroom.main(args);
     }
-    
 }
