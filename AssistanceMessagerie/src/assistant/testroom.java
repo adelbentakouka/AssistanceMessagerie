@@ -150,7 +150,10 @@ public class testroom extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        user utilisateur = new user();
+        user monUser = new user(jTextField1.getText(),jTextField2.getText(),jTextField4.getText().toIn,jTextField3.getText());
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
