@@ -5,7 +5,8 @@
  */
 package assistancemessagerie;
 
-import assistant.testroom;
+import common.zdc;
+import pkginterface.testroom;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +19,15 @@ public class AssistanceMessagerie {
     /**
      * @param args the command line arguments
      */
-    public user monUtilisateur;
-    public List<room> listeSalle = new ArrayList<room>();
-    public static void main(String[] args) throws IOException {
-        testroom.main(args);
+    public static void main(String[] args) {
+        zdc zoneCommune = new zdc();
+        zoneCommune.createRoom("test");
+        zoneCommune.createRoom("test2");
+        zoneCommune.getListeroom();
+        
+        for(int i = 0; i < zoneCommune.getListeroom().size();i++)
+        {
+             System.out.println(zoneCommune.getListeroom().get(i).nom + zoneCommune.getListeroom().get(i).adresse + zoneCommune.getListeroom().get(i).port);
+        }
     }
 }
