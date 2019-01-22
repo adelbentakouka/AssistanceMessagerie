@@ -5,6 +5,8 @@
  */
 package pkginterface;
 
+import common.db;
+
 /**
  *
  * @author Adim
@@ -14,8 +16,12 @@ public class login extends javax.swing.JFrame {
     /**
      * Creates new form login
      */
+    private db db;
+    private ListRoom lr;
     public login() {
         initComponents();
+        db = new db();
+        lr = new ListRoom();
         setLocationRelativeTo(null);
         etatLogin.setVisible(false);
     }
@@ -32,10 +38,11 @@ public class login extends javax.swing.JFrame {
         buttonConnexion = new javax.swing.JButton();
         labelLogin = new javax.swing.JLabel();
         inputCompte = new javax.swing.JTextField();
-        inputMdp = new javax.swing.JTextField();
         etatLogin = new javax.swing.JLabel();
+        inputMdp = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Assistance Messagerie");
         setResizable(false);
 
         buttonConnexion.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -60,38 +67,26 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        inputMdp.setText("Mot de passe");
-        inputMdp.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                inputMdpFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                inputMdpFocusLost(evt);
-            }
-        });
-
         etatLogin.setForeground(new java.awt.Color(255, 0, 0));
         etatLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         etatLogin.setText("Erreur: bla bla bla bla bla");
+
+        inputMdp.setToolTipText("Mot de passe");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(92, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(labelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(buttonConnexion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(inputCompte, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                                .addComponent(inputMdp))
-                            .addGap(97, 97, 97)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(etatLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(97, 97, 97))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(71, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(etatLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(inputMdp, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(labelLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
+                        .addComponent(buttonConnexion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(inputCompte, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)))
+                .addGap(87, 87, 87))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,10 +98,10 @@ public class login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(inputCompte, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(inputMdp, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addComponent(inputMdp, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buttonConnexion, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -114,11 +109,29 @@ public class login extends javax.swing.JFrame {
 
     private void buttonConnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConnexionActionPerformed
         // TODO add your handling code here:
-        if( inputCompte.getText().equals("Nom de compte") || inputMdp.getText().equals("Mot de passe") || inputCompte.getText().isEmpty() || inputMdp.getText().isEmpty())
+        String password = new String(inputMdp.getPassword());
+        if( inputCompte.getText().equals("Nom de compte") ||  inputCompte.getText().isEmpty() ||password.isEmpty())
         {
             etatLogin.setText("Identifiant vide.");
-            etatLogin.setVisible(true);
         }
+        else
+        {
+            
+            if(db.connexion(inputCompte.getText(), password))
+            {
+                etatLogin.setText("Connecté.");
+                
+                // Traitement quand on est connecter
+                setVisible(false);
+                lr.setVisible(true);
+  
+            }
+            else
+            {
+                etatLogin.setText("Identifiant incorrect.");
+            }
+        }  
+        etatLogin.setVisible(true);
     }//GEN-LAST:event_buttonConnexionActionPerformed
 
     private void inputCompteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputCompteFocusLost
@@ -135,21 +148,6 @@ public class login extends javax.swing.JFrame {
             inputCompte.setText("");
         }
     }//GEN-LAST:event_inputCompteFocusGained
-
-    private void inputMdpFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputMdpFocusLost
-        // TODO add your handling code here:
-        if (inputMdp.getText().isEmpty()) 
-         {
-            inputMdp.setText("Mot de passe");
-         }
-    }//GEN-LAST:event_inputMdpFocusLost
-
-    private void inputMdpFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputMdpFocusGained
-        // TODO add your handling code here:
-         if (inputMdp.getText().equals("Mot de passe")) {
-            inputMdp.setText("");
-        }
-    }//GEN-LAST:event_inputMdpFocusGained
 
     /**
      * @param args the command line arguments
@@ -190,7 +188,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JButton buttonConnexion;
     private javax.swing.JLabel etatLogin;
     private javax.swing.JTextField inputCompte;
-    private javax.swing.JTextField inputMdp;
+    private javax.swing.JPasswordField inputMdp;
     private javax.swing.JLabel labelLogin;
     // End of variables declaration//GEN-END:variables
 }

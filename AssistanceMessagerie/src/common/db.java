@@ -19,35 +19,36 @@ import mySql.MySQL;
  */
 public class db {
     
-   /*  static MySQL sqlObj = new MySQL();
-     
-    public static void main(String[] args)
-     {
-        ResultSet rs = sqlObj.open("SELECT * FROM user");
-        try{
-            System.out.println(rs.getFetchSize());
-
-            while(rs.next()){
-                System.out.println(rs.getString("username")+" "+
-                        rs.getString("password"));
-            }
-        }catch(SQLException ex){
-            System.out.println(ex);
-        }
-     }/*
-    public ArrayList connexion(String _name, String _password)
+    static MySQL sqlObj;
+    public db()
     {
-        ResultSet rs = sqlObj.open("SELECT password FROM user where username="+_name);
+        sqlObj = new MySQL();
+    }
+    public boolean connexion(String _name, String _password)
+    {
+
+        boolean valid = false;
+
+        ResultSet rs = sqlObj.open("SELECT password FROM user where username='"+_name+"'");
         try{
-            while(rs.next()){
-               
-                System.out.println(rs.getString("username")+" "+
-                        rs.getString("password"));
+            while(rs.next())
+            {
+                if(rs.getRow() != 0)
+                {
+                    if(rs.getString("password").equals(_password))
+                    {
+                        valid = true;
+                     }       
+                }
             }
+            
         }catch(SQLException ex){
             System.out.println(ex);
         }
-    }*/
+        return valid;
+    }
+    
+
             
     
 }

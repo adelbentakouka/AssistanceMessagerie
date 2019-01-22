@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Assistance Messagerie"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -24,25 +25,18 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace pref="92" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="labelLogin" min="-2" pref="122" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="buttonConnexion" max="32767" attributes="0"/>
-                              <Component id="inputCompte" pref="122" max="32767" attributes="0"/>
-                              <Component id="inputMdp" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="etatLogin" min="-2" pref="128" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="71" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="etatLogin" alignment="1" min="-2" pref="128" max="-2" attributes="0"/>
+                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="inputMdp" alignment="1" pref="0" max="32767" attributes="0"/>
+                      <Component id="labelLogin" alignment="1" pref="122" max="32767" attributes="0"/>
+                      <Component id="buttonConnexion" max="32767" attributes="0"/>
+                      <Component id="inputCompte" pref="122" max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,10 +50,10 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="inputCompte" min="-2" pref="35" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="inputMdp" min="-2" pref="35" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="inputMdp" min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="buttonConnexion" min="-2" pref="43" max="-2" attributes="0"/>
-              <EmptySpace pref="14" max="32767" attributes="0"/>
+              <EmptySpace pref="22" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -94,15 +88,6 @@
         <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="inputCompteFocusLost"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="inputMdp">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Mot de passe"/>
-      </Properties>
-      <Events>
-        <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="inputMdpFocusGained"/>
-        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="inputMdpFocusLost"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="etatLogin">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -110,6 +95,11 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Erreur: bla bla bla bla bla"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="inputMdp">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Mot de passe"/>
       </Properties>
     </Component>
   </SubComponents>

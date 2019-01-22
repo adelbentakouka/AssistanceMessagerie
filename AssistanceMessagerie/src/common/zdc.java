@@ -16,7 +16,7 @@ import assistancemessagerie.room;
 public class zdc {
     private ArrayList<room> Listeroom = new ArrayList<room>();
     private ArrayList<Integer> ports = new ArrayList<Integer>();
-    private int listePorts = 3001;
+    private int listePorts = 3020;
     private String adresseServeur = "127.0.0.1";
     
     

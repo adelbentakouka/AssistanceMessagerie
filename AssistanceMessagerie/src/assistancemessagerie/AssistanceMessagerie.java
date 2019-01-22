@@ -6,10 +6,13 @@
 package assistancemessagerie;
 
 import common.zdc;
-import pkginterface.testroom;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.ArrayList;
-import java.util.List;
+import pkginterface.ListRoom;
+import pkginterface.login;
 
 /**
  *
@@ -19,15 +22,32 @@ public class AssistanceMessagerie {
     /**
      * @param args the command line arguments
      */
+    private static login interfaceLogin;
+    private static ListRoom interfaceListRoom;
     public static void main(String[] args) {
         zdc zoneCommune = new zdc();
-        zoneCommune.createRoom("test");
-        zoneCommune.createRoom("test2");
-        zoneCommune.getListeroom();
+        interfaceLogin = new login();
+        interfaceListRoom = new ListRoom();
         
-        for(int i = 0; i < zoneCommune.getListeroom().size();i++)
-        {
-             System.out.println(zoneCommune.getListeroom().get(i).nom + zoneCommune.getListeroom().get(i).adresse + zoneCommune.getListeroom().get(i).port);
-        }
+        //Création des 5 rooms
+        zoneCommune.createRoom("Room 1");
+        zoneCommune.createRoom("Room 2");
+        zoneCommune.createRoom("Room 3");
+        zoneCommune.createRoom("Room 4");
+        zoneCommune.createRoom("Room 5");
+        zoneCommune.createRoom("Room 6");
+        zoneCommune.createRoom("Room 7");
+        zoneCommune.createRoom("Room 8");
+        zoneCommune.createRoom("Room 9");
+        zoneCommune.createRoom("Room 10");
+        
+        //Affichage de la zone de connexion
+        interfaceLogin.setVisible(true);
+        interfaceListRoom.setVisible(false);
+
+        
+        
+       
+ 
     }
 }
