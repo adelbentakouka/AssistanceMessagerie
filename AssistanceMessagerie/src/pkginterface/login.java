@@ -132,6 +132,12 @@ public class login extends javax.swing.JFrame {
             }
         }  
         etatLogin.setVisible(true);
+        
+        //phase de test 
+        etatLogin.setText("Connecté.");  
+        // Traitement quand on est connecter
+        setVisible(false);
+        lr.setVisible(true);
     }//GEN-LAST:event_buttonConnexionActionPerformed
 
     private void inputCompteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputCompteFocusLost
