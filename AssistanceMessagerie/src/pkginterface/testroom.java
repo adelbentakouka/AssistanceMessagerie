@@ -7,7 +7,7 @@
 package pkginterface;
 
 import assistancemessagerie.room;
-import assistancemessagerie.user;
+import common.user;
 
 /**
  *

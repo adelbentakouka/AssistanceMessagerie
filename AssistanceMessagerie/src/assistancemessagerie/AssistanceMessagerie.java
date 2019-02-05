@@ -13,6 +13,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import pkginterface.ListRoom;
 import pkginterface.login;
+import pkginterface.testroom;
 
 /**
  *
@@ -24,10 +25,12 @@ public class AssistanceMessagerie {
      */
     private static login interfaceLogin;
     private static ListRoom interfaceListRoom;
+    private static testroom interfaceClient;
     public static void main(String[] args) {
         zdc zoneCommune = new zdc();
         interfaceLogin = new login();
         interfaceListRoom = new ListRoom();
+        interfaceClient = new testroom();
         
         //Création des 5 rooms
         zoneCommune.createRoom("Room 1");
@@ -43,6 +46,7 @@ public class AssistanceMessagerie {
         
         //Affichage de la zone de connexion
         interfaceLogin.setVisible(true);
+        interfaceClient.setVisible(true);
         interfaceListRoom.setVisible(false);
 
         
