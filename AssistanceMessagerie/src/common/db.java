@@ -24,28 +24,49 @@ public class db {
     {
         sqlObj = new MySQL();
     }
-    public boolean connexion(String _name, String _password)
+    public ArrayList connexion(String _name, String _password)
     {
 
-        boolean valid = false;
-
-        ResultSet rs = sqlObj.open("SELECT password FROM user where username='"+_name+"'");
+        boolean valid = false; // Code de retour du resultat
+  
+        //Selectionne tout de l'utilisateur
+        ResultSet rs = sqlObj.open("SELECT * FROM user2 where nom='"+_name+"'");
+        ArrayList<String> result = new ArrayList();
         try{
+            //On regarde le resultat
             while(rs.next())
-            {
+            {   
+                //SI on trouve le nom
                 if(rs.getRow() != 0)
                 {
-                    if(rs.getString("password").equals(_password))
+                    // Si le mdp entrer = au mdp entrer en bdd
+                    if(rs.getString("motdepasse").equals(_password))
                     {
+                        // stocker les valeurs 
                         valid = true;
+                        System.out.print(rs.getString("secteur")+" "+rs.getString("prenom"));
+                        result.add(0, "code");
+                        result.add(1, rs.getString("prenom"));
+                        result.add(2, rs.getString("secteur"));
+                        
                      }       
                 }
+
             }
             
         }catch(SQLException ex){
             System.out.println(ex);
+
         }
-        return valid;
+        //Si on une info dans result on stock la variable de retour
+        if(!result.isEmpty())
+        {
+            result.set(0, Boolean.toString(valid));
+        }
+        // sinon on ajoute le code de retour
+        else 
+            result.add(0, Boolean.toString(valid));
+        return result;
     }
     
 

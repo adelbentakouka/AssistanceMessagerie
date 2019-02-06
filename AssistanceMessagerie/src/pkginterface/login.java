@@ -6,6 +6,7 @@
 package pkginterface;
 
 import common.db;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,10 +19,10 @@ public class login extends javax.swing.JFrame {
      */
     private db db;
     private ListRoom lr;
+   
     public login() {
         initComponents();
         db = new db();
-        lr = new ListRoom();
         setLocationRelativeTo(null);
         etatLogin.setVisible(false);
     }
@@ -116,7 +117,20 @@ public class login extends javax.swing.JFrame {
         }
         else
         {
+            ArrayList<String> result = db.connexion(inputCompte.getText(), password);
             
+            if(result.get(0).equals("true"))
+            {
+                etatLogin.setText("Connecté.");
+                System.out.println("Compte get ! "+result.get(1)+" "+result.get(2));
+                
+                // Traitement quand on est connecter
+                setVisible(false);
+                
+                lr = new ListRoom();
+                lr.setVisible(true);
+            }
+            /*
             if(db.connexion(inputCompte.getText(), password))
             {
                 etatLogin.setText("Connecté.");
@@ -126,18 +140,15 @@ public class login extends javax.swing.JFrame {
                 lr.setVisible(true);
   
             }
-            else
+            */
+            else if(result.get(0).equals("false"))
             {
                 etatLogin.setText("Identifiant incorrect.");
             }
         }  
         etatLogin.setVisible(true);
         
-        //phase de test 
-        etatLogin.setText("Connecté.");  
-        // Traitement quand on est connecter
-        setVisible(false);
-        lr.setVisible(true);
+
     }//GEN-LAST:event_buttonConnexionActionPerformed
 
     private void inputCompteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputCompteFocusLost

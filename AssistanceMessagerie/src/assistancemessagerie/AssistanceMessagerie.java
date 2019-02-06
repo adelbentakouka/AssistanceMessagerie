@@ -29,7 +29,7 @@ public class AssistanceMessagerie {
     public static void main(String[] args) {
         zdc zoneCommune = new zdc();
         interfaceLogin = new login();
-        interfaceListRoom = new ListRoom();
+      //  interfaceListRoom = new ListRoom();
         interfaceClient = new testroom();
         
         //Création des 5 rooms
@@ -47,7 +47,7 @@ public class AssistanceMessagerie {
         //Affichage de la zone de connexion
         interfaceLogin.setVisible(true);
         interfaceClient.setVisible(true);
-        interfaceListRoom.setVisible(false);
+  //      interfaceListRoom.setVisible(false);
 
         
         

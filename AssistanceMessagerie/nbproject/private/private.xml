@@ -5,16 +5,21 @@
         <group>
             <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/mySql/MySQL.java</file>
             <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/ListRoom.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/user.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/user.java</file>
             <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/interfaceChat.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/AssistanceMessagerie.java</file>
             <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/login.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/room.java</file>
             <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/db.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/zdc.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/client/MainClient.java</file>
             <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/Message.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/assistant.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/client/Client.java</file>
             <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/testroom.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/client/ClientReceive.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/server/Server.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/AssistanceMessagerie.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/room.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/zdc.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/assistant.java</file>
+            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/client/ClientSend.java</file>
         </group>
     </open-files>
 </project-private>
