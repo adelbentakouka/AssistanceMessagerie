@@ -5,17 +5,62 @@
  */
 package pkginterface;
 
+import client.ClientReceive;
+import client.ClientSend;
+import common.Message;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author p1819346
  */
 public class interfaceChat extends javax.swing.JFrame {
 
+    private String pseudonyme;
+    private String adresse;
+    private int port;
+    private Socket socket;
+    private ObjectInputStream in;
+    private ObjectOutputStream out;
+    
+    
     /**
      * Creates new form interfaceChat
      */
     public interfaceChat() {
         initComponents();
+    }
+    
+    public interfaceChat(String pseudo,String ad, int p) throws IOException
+    {
+        initComponents();
+        adresse=ad;
+        port=p;
+        pseudonyme = pseudo;
+        socket=new Socket(ad, p);
+        out = new ObjectOutputStream(socket.getOutputStream());
+        Thread threadClientR =new Thread(new ClientReceive(this, socket));
+        threadClientR.start();
+        
+    }
+    
+    public void afficherMessage(String s)
+    {
+        jTextArea1.append(s);
+    }
+    
+    public void disconnect() throws IOException
+    {
+        out.close();
+        socket.close();
+        if (in!=null)
+        in.close();
+        System.exit(0);
     }
 
     /**
@@ -40,6 +85,11 @@ public class interfaceChat extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setText("jTextField1");
 
@@ -78,6 +128,21 @@ public class interfaceChat extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Message mess = new Message("client", jTextField1.getText());
+        try {
+            out.writeObject(mess);
+        } catch (IOException ex) {
+            Logger.getLogger(interfaceChat.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            out.flush();
+        } catch (IOException ex) {
+            Logger.getLogger(interfaceChat.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -3,17 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/ListRoom.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/user.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/interfaceChat.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/AssistanceMessagerie.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/login.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/room.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/db.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/zdc.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/common/Message.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/assistant.java</file>
-            <file>file:/D:/Users/Adim/Documents/Projet/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/testroom.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/AssistanceMessagerie.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/interfaceChat.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/testroom.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/common/db.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/login.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/client/ClientReceive.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/pkginterface/ListRoom.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/assistancemessagerie/room.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/client/Client.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/common/zdc.java</file>
+            <file>file:/F:/COURS/JAVA/GIT2/AssistanceMessagerie/AssistanceMessagerie/src/common/user.java</file>
         </group>
     </open-files>
 </project-private>

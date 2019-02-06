@@ -32,4 +32,9 @@ public class room {
         
     }
     
+    public int getPort()
+    {
+        return port;
+    }
+    
 }

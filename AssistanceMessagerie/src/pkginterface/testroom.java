@@ -7,7 +7,6 @@
 package pkginterface;
 
 import assistancemessagerie.room;
-import assistancemessagerie.user;
 import common.zdc;
 
 /**
@@ -16,7 +15,7 @@ import common.zdc;
  */
 public class testroom extends javax.swing.JFrame {
 
-    zdc zoneCommune = new zdc();
+    public zdc zoneCommune = new zdc();
     /** Creates new form testroom */
     public testroom() {
         initComponents();
@@ -151,7 +150,7 @@ public class testroom extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void syncZDC(zdc z)
+    public void syncZDC(zdc z)
     {
         zoneCommune = z;
     }

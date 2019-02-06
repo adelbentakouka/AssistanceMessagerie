@@ -11,6 +11,7 @@ import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import pkginterface.interfaceChat;
 
 /**
  *
@@ -18,12 +19,13 @@ import java.util.logging.Logger;
  */
 public class ClientReceive implements Runnable {
 
-    private Client client;
+    private interfaceChat interfaceChat;
+
     private Socket socket;
     private ObjectInputStream in;
 
-    public ClientReceive(Client c, Socket soc) {
-        client = c;
+    public ClientReceive(interfaceChat ic, Socket soc) {
+        interfaceChat = ic;
         socket = soc;
     }
 
@@ -37,13 +39,12 @@ public class ClientReceive implements Runnable {
                 Message mess = (Message) in.readObject();
                 
                 if (mess != null) {
-                    System.out.println("\nMessage reçu : " + mess);
-                    
+                    interfaceChat.afficherMessage(mess.toString() + "\r\n");  
                 } else {
                     isActive = false;
                 }
             }
-            client.disconnectedServer();
+            interfaceChat.disconnect();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assistancemessagerie;
+package common;
 
-import client.Client;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import server.Server;
@@ -27,5 +27,15 @@ public class user {
         prenom=p;
         noPhone=no;
         mail=m;
+        
+    }
+    public user(String prenom_, String nom_)
+    {
+        nom = nom_;
+        prenom = prenom_;
+    }
+    public String getNom()
+    {
+        return nom+" "+prenom;
     }
 }

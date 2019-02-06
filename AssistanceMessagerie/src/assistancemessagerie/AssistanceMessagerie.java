@@ -12,7 +12,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import pkginterface.ListRoom;
+import pkginterface.interfaceChat;
 import pkginterface.login;
+import pkginterface.testroom;
 
 /**
  *
@@ -22,12 +24,19 @@ public class AssistanceMessagerie {
     /**
      * @param args the command line arguments
      */
+    
     private static login interfaceLogin;
     private static ListRoom interfaceListRoom;
-    public static void main(String[] args) {
+    private static testroom interfaceClient;
+    private static interfaceChat chat1;
+    private static interfaceChat chat2;
+
+    public static void main(String[] args) throws IOException {
+        /*
         zdc zoneCommune = new zdc();
         interfaceLogin = new login();
         interfaceListRoom = new ListRoom();
+        interfaceClient = new testroom();
         
         //Création des 5 rooms
         zoneCommune.createRoom("Room 1");
@@ -43,9 +52,18 @@ public class AssistanceMessagerie {
         
         //Affichage de la zone de connexion
         interfaceLogin.setVisible(true);
+        interfaceClient.setVisible(true);
         interfaceListRoom.setVisible(false);
-
         
+        
+        
+
+        interfaceClient.syncZDC(zoneCommune);
+        */
+        chat1 = new interfaceChat("test","127.0.0.1",3020);
+        chat2 = new interfaceChat("test1","127.0.0.1",3020);
+        chat1.setVisible(true);
+        chat2.setVisible(true);
         
        
  

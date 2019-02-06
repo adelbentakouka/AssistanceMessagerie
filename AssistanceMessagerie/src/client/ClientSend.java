@@ -36,7 +36,6 @@ public class ClientSend implements Runnable {
                 String m = sc.nextLine();
                 Message mess = new Message("client", m);
                 out.writeObject(mess);
-
                 out.flush();
             }
         } catch (IOException ex) {
