@@ -96,7 +96,8 @@ public class ListRoom extends javax.swing.JFrame {
 
     private void boutonRejoindreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonRejoindreActionPerformed
         // TODO add your handling code here:
-        System.out.print("Elements: "+ListRoomInterface.getSelectedValue());
+        int nRoom = ListRoomInterface.getSelectedIndex() +1;
+        System.out.print("Elements: "+nRoom);
     }//GEN-LAST:event_boutonRejoindreActionPerformed
 
     /**
