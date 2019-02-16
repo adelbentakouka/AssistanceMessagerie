@@ -35,7 +35,10 @@ public class interfaceChat extends javax.swing.JFrame {
     public interfaceChat() {
         initComponents();
     }
-    
+    public String getPseudonyme()
+    {
+        return pseudonyme;
+    }
     public interfaceChat(String pseudo,String ad, int p) throws IOException
     {
         initComponents();
@@ -129,7 +132,9 @@ public class interfaceChat extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Message mess = new Message("client", jTextField1.getText());
+        Message mess = new Message(pseudonyme+" : "+jTextField1.getText());
+       
+        
         try {
             out.writeObject(mess);
         } catch (IOException ex) {

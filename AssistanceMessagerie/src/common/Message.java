@@ -15,14 +15,14 @@ import java.io.Serializable;
 public class Message implements Serializable{
     private String sender;
     private String content;
-    public Message(String s, String c)
+    public Message(String c)
     {
-        sender=s;
+
         content=c;
     }
     public String toString()
     {
-        return content+ " envoyé par "+sender;
+        return content;
     }
     public void setId(String s)
     {
