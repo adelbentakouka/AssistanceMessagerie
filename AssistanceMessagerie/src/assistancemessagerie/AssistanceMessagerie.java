@@ -13,8 +13,8 @@ import java.net.Socket;
 import java.util.ArrayList;
 import pkginterface.ListRoom;
 import pkginterface.interfaceChat;
-import pkginterface.login;
-import pkginterface.testroom;
+import pkginterface.interfaceAdmin;
+import pkginterface.interfaceUser;
 
 /**
  *
@@ -25,9 +25,9 @@ public class AssistanceMessagerie {
      * @param args the command line arguments
      */
     
-    private static login interfaceLogin;
+    private static interfaceAdmin interfaceLogin;
     private static ListRoom interfaceListRoom;
-    private static testroom interfaceClient;
+    private static interfaceUser interfaceClient;
     private static interfaceChat chat1;
     private static interfaceChat chat2;
 
