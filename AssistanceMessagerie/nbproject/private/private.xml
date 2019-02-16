@@ -3,11 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/pkginterface/interfaceUser.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/pkginterface/interfaceChat.java</file>
-            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/Client.java</file>
-            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/ClientReceive.java</file>
-            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/MainClient.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/assistancemessagerie/AssistanceMessagerie.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/pkginterface/ListRoom.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/assistancemessagerie/room.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/ClientSend.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/Client.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/assistancemessagerie/assistant.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/common/Message.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/ClientReceive.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/pkginterface/interfaceAdmin.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/common/user.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/common/zdc.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/MainClient.java</file>
         </group>
     </open-files>
 </project-private>

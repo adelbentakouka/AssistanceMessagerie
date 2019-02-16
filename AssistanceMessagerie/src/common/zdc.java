@@ -8,6 +8,8 @@ package common;
 import java.util.ArrayList;
 import server.Server;
 import assistancemessagerie.room;
+import java.io.IOException;
+import pkginterface.interfaceChat;
 
 /**
  *
@@ -20,11 +22,12 @@ public class zdc {
     private String adresseServeur = "127.0.0.1";
     
     
-    public void createRoom(String nom)
+    
+    
+    public void createRoom(String nom,int p)
         {
-            room nouvelleRoom = new room(nom,adresseServeur,listePorts);
+            room nouvelleRoom = new room(nom,adresseServeur,p);
             Listeroom.add(nouvelleRoom);
-            listePorts++;
         }
 
     public ArrayList<room> getListeroom()

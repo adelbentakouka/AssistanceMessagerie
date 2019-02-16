@@ -39,16 +39,16 @@ public class AssistanceMessagerie {
         interfaceUser = new interfaceUser();
         
         //Création des 5 rooms
-        zoneCommune.createRoom("Room 1");
-        zoneCommune.createRoom("Room 2");
-        zoneCommune.createRoom("Room 3");
-        zoneCommune.createRoom("Room 4");
-        zoneCommune.createRoom("Room 5");
-        zoneCommune.createRoom("Room 6");
-        zoneCommune.createRoom("Room 7");
-        zoneCommune.createRoom("Room 8");
-        zoneCommune.createRoom("Room 9");
-        zoneCommune.createRoom("Room 10");
+        zoneCommune.createRoom("Room 1",3020);
+        zoneCommune.createRoom("Room 2",3021);
+        zoneCommune.createRoom("Room 3",3022);
+        zoneCommune.createRoom("Room 4",3023);
+        zoneCommune.createRoom("Room 5",3024);
+        zoneCommune.createRoom("Room 6",3025);
+        zoneCommune.createRoom("Room 7",3026);
+        zoneCommune.createRoom("Room 8",3027);
+        zoneCommune.createRoom("Room 9",3028);
+        zoneCommune.createRoom("Room 10",3029);
         
         //Affichage de la zone de connexion
         interfaceAdmin.setVisible(true);
@@ -59,7 +59,6 @@ public class AssistanceMessagerie {
         
 
         interfaceUser.syncZDC(zoneCommune);
-        
         /*
         chat1 = new interfaceChat("test","127.0.0.1",3020);
         chat2 = new interfaceChat("test1","127.0.0.1",3020);
