@@ -6,7 +6,10 @@
 package pkginterface;
 
 import assistancemessagerie.room;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,9 +20,18 @@ public class ListRoom extends javax.swing.JFrame {
     /**
      * Creates new form ListRoom
      */
+    interfaceChat chat;
+    
+    private String pseudo = "";
+   
+    public void setPseudo(String _prenom, String _nom, String _secteur)
+    {
+        pseudo = _secteur+" - "+_prenom+" "+_nom;
+    }
     public ListRoom() {
         initComponents();
         setLocationRelativeTo(null);
+
 
     }
 
@@ -37,7 +49,7 @@ public class ListRoom extends javax.swing.JFrame {
         boutonRejoindre = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Assistance Messagerie");
         setIconImages(null);
         setResizable(false);
@@ -96,7 +108,15 @@ public class ListRoom extends javax.swing.JFrame {
 
     private void boutonRejoindreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonRejoindreActionPerformed
         // TODO add your handling code here:
-        System.out.print("Elements: "+ListRoomInterface.getSelectedValue());
+        int port = 3020 + ListRoomInterface.getSelectedIndex();
+        try {
+            System.out.print(pseudo);
+            chat = new interfaceChat(pseudo ,"127.0.0.1", port);
+            chat.setVisible(true);
+            // System.out.print("Port :"+port+"\r\n");
+        } catch (IOException ex) {
+            Logger.getLogger(ListRoom.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_boutonRejoindreActionPerformed
 
     /**

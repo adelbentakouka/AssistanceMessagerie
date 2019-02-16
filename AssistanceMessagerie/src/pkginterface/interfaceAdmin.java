@@ -6,6 +6,7 @@
 package pkginterface;
 
 import common.db;
+import java.util.ArrayList;
 
 /**
  *
@@ -41,7 +42,7 @@ public class interfaceAdmin extends javax.swing.JFrame {
         etatLogin = new javax.swing.JLabel();
         inputMdp = new javax.swing.JPasswordField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Assistance Messagerie");
         setResizable(false);
 
@@ -117,27 +118,30 @@ public class interfaceAdmin extends javax.swing.JFrame {
         else
         {
             
-            if(db.connexion(inputCompte.getText(), password))
+             ArrayList<String> result = db.connexion(inputCompte.getText(), password);
+            
+            if(result.get(0).equals("true"))
             {
                 etatLogin.setText("Connecté.");
+              //  System.out.println("Compte get ! "+result.get(1)+" "+result.get(2));
                 
                 // Traitement quand on est connecter
                 setVisible(false);
+                
+                lr = new ListRoom();
+                lr.setPseudo(result.get(1), inputCompte.getText(), result.get(2));
                 lr.setVisible(true);
-  
             }
-            else
+
+            else if(result.get(0).equals("false"))
             {
                 etatLogin.setText("Identifiant incorrect.");
             }
+
         }  
         etatLogin.setVisible(true);
         
-        //phase de test 
-        etatLogin.setText("Connecté.");  
-        // Traitement quand on est connecter
-        setVisible(false);
-        lr.setVisible(true);
+
     }//GEN-LAST:event_buttonConnexionActionPerformed
 
     private void inputCompteFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputCompteFocusLost

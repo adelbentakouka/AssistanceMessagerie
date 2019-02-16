@@ -25,18 +25,18 @@ public class AssistanceMessagerie {
      * @param args the command line arguments
      */
     
-    private static interfaceAdmin interfaceLogin;
+    private static interfaceAdmin interfaceAdmin;
     private static ListRoom interfaceListRoom;
-    private static interfaceUser interfaceClient;
+    private static interfaceUser interfaceUser;
     private static interfaceChat chat1;
     private static interfaceChat chat2;
 
     public static void main(String[] args) throws IOException {
-        /*
+        
         zdc zoneCommune = new zdc();
-        interfaceLogin = new login();
+        interfaceAdmin = new interfaceAdmin();
         interfaceListRoom = new ListRoom();
-        interfaceClient = new testroom();
+        interfaceUser = new interfaceUser();
         
         //Création des 5 rooms
         zoneCommune.createRoom("Room 1");
@@ -51,21 +51,22 @@ public class AssistanceMessagerie {
         zoneCommune.createRoom("Room 10");
         
         //Affichage de la zone de connexion
-        interfaceLogin.setVisible(true);
-        interfaceClient.setVisible(true);
+        interfaceAdmin.setVisible(true);
+        interfaceUser.setVisible(true);
         interfaceListRoom.setVisible(false);
         
         
         
 
-        interfaceClient.syncZDC(zoneCommune);
-        */
+        interfaceUser.syncZDC(zoneCommune);
+        
+        /*
         chat1 = new interfaceChat("test","127.0.0.1",3020);
         chat2 = new interfaceChat("test1","127.0.0.1",3020);
         chat1.setVisible(true);
         chat2.setVisible(true);
         
-       
+       */
  
     }
 }
