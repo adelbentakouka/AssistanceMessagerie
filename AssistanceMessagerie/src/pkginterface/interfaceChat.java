@@ -41,10 +41,6 @@ public class interfaceChat extends javax.swing.JFrame {
     public interfaceChat() {
         initComponents();
     }
-    public String getPseudonyme()
-    {
-        return pseudonyme;
-    }
     
     public interfaceChat(String pseudo,String ad, int p) throws IOException
     {

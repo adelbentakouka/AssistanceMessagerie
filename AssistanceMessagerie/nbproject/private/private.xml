@@ -9,6 +9,8 @@
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/pkginterface/ListRoom.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/assistancemessagerie/room.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/ClientSend.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/server/MainServer.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/server/Server.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/Client.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/assistancemessagerie/assistant.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/common/Message.java</file>
@@ -17,6 +19,7 @@
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/common/user.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/common/zdc.java</file>
             <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/client/MainClient.java</file>
+            <file>file:/C:/Users/Adel/Documents/Git/chat/AssistanceMessagerie/src/server/Connection.java</file>
         </group>
     </open-files>
 </project-private>
