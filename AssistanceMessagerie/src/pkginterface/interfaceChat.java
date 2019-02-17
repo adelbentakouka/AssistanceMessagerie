@@ -6,7 +6,6 @@
 package pkginterface;
 
 import client.ClientReceive;
-import client.ClientSend;
 import common.Message;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
