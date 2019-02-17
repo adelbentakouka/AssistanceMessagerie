@@ -24,6 +24,10 @@ public class db {
     {
         sqlObj = new MySQL();
     }
+    public void enregPb(String _nom, String _pb)
+    {
+        ResultSet rs = sqlObj.open("INSERT INTO problemes (nom,probleme) VALUES ('"+_nom+"','"+_pb+"')");
+    }
     public ArrayList connexion(String _name, String _password)
     {
 

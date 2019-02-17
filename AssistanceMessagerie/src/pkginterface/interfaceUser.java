@@ -11,6 +11,7 @@ import common.zdc;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import common.db;
 
 /**
  *
@@ -134,6 +135,8 @@ public class interfaceUser extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         String pseudo = jTextField1.getText() + " " + jTextField2.getText();
+        db database = new db();
+        database.enregPb(pseudo, jTextArea1.getText());
         try {
             chat = new interfaceChat(pseudo ,"127.0.0.1", usedPort);
         } catch (IOException ex) {
