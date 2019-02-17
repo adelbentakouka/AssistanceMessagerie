@@ -51,21 +51,21 @@ public class AssistanceMessagerie {
         zoneCommune.createRoom("Room 10",3029);
         
         //Affichage de la zone de connexion
-        /*
+        
         interfaceAdmin.setVisible(true);
         interfaceUser.setVisible(true);
         interfaceListRoom.setVisible(false);
-        */
+        
         
         
 
         interfaceUser.syncZDC(zoneCommune);
-        
+        /*
         chat1 = new interfaceChat("test","127.0.0.1",3020);
         chat2 = new interfaceChat("test1","127.0.0.1",3020);
         chat1.setVisible(true);
         chat2.setVisible(true);
-        
+        */
        
  
     }
