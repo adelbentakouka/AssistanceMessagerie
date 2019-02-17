@@ -13,10 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import pkginterface.interfaceChat;
 
-/**
- *
- * @author myriam.fort
- */
+
 public class ClientReceive implements Runnable {
 
     private interfaceChat interfaceChat;

@@ -13,10 +13,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author myriam.fort
- */
+
 public class ClientSend implements Runnable {
 
     private Socket socket;
